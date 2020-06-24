@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UEFAModelStoreContainer" CdmEntityContainer="UEFAEntities">
+    <EntitySetMapping Name="Timovis">
+      <EntityTypeMapping TypeName="UEFAModel.Timovi">
+        <MappingFragment StoreEntitySet="Timovi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Zemlja" ColumnName="Zemlja" />
+          <ScalarProperty Name="Liga" ColumnName="Liga" />
+          <ScalarProperty Name="Koeficijent" ColumnName="Koeficijent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

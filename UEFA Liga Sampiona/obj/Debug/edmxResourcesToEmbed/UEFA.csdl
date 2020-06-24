@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UEFAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Timovi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Naziv" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="Zemlja" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="Liga" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="Koeficijent" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="UEFAEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Timovis" EntityType="Self.Timovi" />
+  </EntityContainer>
+</Schema>
