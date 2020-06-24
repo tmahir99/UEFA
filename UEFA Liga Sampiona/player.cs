@@ -8,7 +8,6 @@ namespace UEFA_Liga_Sampiona
 {
     public partial class player : Form
     {
-        OleDbConnection connect = new OleDbConnection();
         public player()
         {
             InitializeComponent();
@@ -34,7 +33,7 @@ namespace UEFA_Liga_Sampiona
         {
             using (UEFAEntities ctx = new UEFAEntities())
             {
-                dataGridView1.DataSource = ctx.Timovis.ToList();
+                dataGridView1.DataSource = ctx.Timovis.OrderByDescending(tim => tim.Koeficijent).ToList();
             }
         }
 

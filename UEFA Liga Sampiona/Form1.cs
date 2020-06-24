@@ -31,7 +31,7 @@ namespace UEFA_Liga_Sampiona
         {
             using (UEFAEntities ctx = new UEFAEntities())
             {
-                zreb = ctx.Timovis.ToList();
+                zreb = ctx.Timovis.OrderByDescending(tim => tim.Koeficijent).ToList();
             }
         }
 
@@ -54,15 +54,15 @@ namespace UEFA_Liga_Sampiona
         {
             foreach(Timovi tim in zreb)
             {
-                if(CheckCountries(tim, A) && A.Count() < 8)
+                if(A.Count() < 8)
                 {
                     A.Add(tim);
                 }
-                else if(CheckCountries(tim, B) && B.Count() < 8)
+                else if(B.Count() < 8)
                 {
                     B.Add(tim);
                 }
-                else if(CheckCountries(tim, C) && C.Count() < 8)
+                else if(C.Count() < 8)
                 {
                     C.Add(tim);
                 }
@@ -71,19 +71,6 @@ namespace UEFA_Liga_Sampiona
                     D.Add(tim);
                 }
             }
-        }
-
-        //Posaljemo tim koji nam treba i listu u kojoj bi mozda bio
-        //Ako ta lista ima tim sa zemljom naseg prosledjenog tima
-        //Onda vraca false i nastavljamo dalje
-        private bool CheckCountries(Timovi tim, List<Timovi> zreb)
-        {
-            foreach(Timovi t in zreb)
-            {
-                if (tim.Zemlja == t.Zemlja)
-                    return false;
-            }
-            return true;
         }
     }
 }

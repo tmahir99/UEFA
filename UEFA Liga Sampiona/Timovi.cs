@@ -35,7 +35,7 @@ namespace UEFA_Liga_Sampiona
 
         public override string ToString()
         {
-            return $"{this.Naziv} {this.Zemlja}";
+            return $"{this.Naziv} {this.Zemlja} {this.Koeficijent}";
         }
     }
 }
