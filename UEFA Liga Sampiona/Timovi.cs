@@ -19,18 +19,20 @@ namespace UEFA_Liga_Sampiona
         public string Zemlja { get; set; }
         public string Liga { get; set; }
         public Nullable<int> Koeficijent { get; set; }
+        public Nullable<int> Poeni { get; set; }
 
         public Timovi()
         {
 
         }
 
-        public Timovi(string Naziv, string Zemlja, string Liga, int Koeficijent)
+        public Timovi(string Naziv, string Zemlja, string Liga, int Koeficijent, int Poeni)
         {
             this.Naziv = Naziv;
             this.Zemlja = Zemlja;
             this.Liga = Liga;
             this.Koeficijent = Koeficijent;
+            this.Poeni = Poeni;
         }
 
         public override string ToString()

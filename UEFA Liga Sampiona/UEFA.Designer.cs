@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\mahir\Desktop\UEFA liga sampiona Mahir Tahirovic\UEFA Liga Sampiona\UEFA Liga Sampiona\UEFA.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\mahir\Documents\GitHub\UEFA\UEFA Liga Sampiona\UEFA.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

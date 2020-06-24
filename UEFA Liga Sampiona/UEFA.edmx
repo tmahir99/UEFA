@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="UEFAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="UEFAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Timovi">
           <Key>
             <PropertyRef Name="id" />
@@ -14,12 +14,12 @@
           <Property Name="Zemlja" Type="nvarchar" MaxLength="32" />
           <Property Name="Liga" Type="nvarchar" MaxLength="32" />
           <Property Name="Koeficijent" Type="int" />
+          <Property Name="Poeni" Type="int" />
         </EntityType>
         <EntityContainer Name="UEFAModelStoreContainer">
           <EntitySet Name="Timovi" EntityType="Self.Timovi" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="UEFAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -32,6 +32,7 @@
           <Property Name="Zemlja" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
           <Property Name="Liga" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
           <Property Name="Koeficijent" Type="Int32" />
+          <Property Name="Poeni" Type="Int32" />
         </EntityType>
         <EntityContainer Name="UEFAEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Timovis" EntityType="Self.Timovi" />
@@ -45,6 +46,7 @@
           <EntitySetMapping Name="Timovis">
             <EntityTypeMapping TypeName="UEFAModel.Timovi">
               <MappingFragment StoreEntitySet="Timovi">
+                <ScalarProperty Name="Poeni" ColumnName="Poeni" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="Naziv" ColumnName="Naziv" />
                 <ScalarProperty Name="Zemlja" ColumnName="Zemlja" />
