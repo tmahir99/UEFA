@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Timovis">
       <EntityTypeMapping TypeName="UEFAModel.Timovi">
         <MappingFragment StoreEntitySet="Timovi">
+          <ScalarProperty Name="Poeni" ColumnName="Poeni" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="Naziv" ColumnName="Naziv" />
           <ScalarProperty Name="Zemlja" ColumnName="Zemlja" />

@@ -17,7 +17,7 @@ namespace UEFA_Liga_Sampiona
         {
             using (UEFAEntities ctx = new UEFAEntities())
             {
-                Timovi tim = new Timovi(name.Text, country.Text, ligue.Text, int.Parse(coeficient.Text));
+                Timovi tim = new Timovi(name.Text, country.Text, ligue.Text, int.Parse(coeficient.Text), 0);
 
                 ctx.Timovis.Add(tim);
 

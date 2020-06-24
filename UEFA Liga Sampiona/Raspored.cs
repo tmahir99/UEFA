@@ -73,15 +73,15 @@ namespace UEFA_Liga_Sampiona
 
             this.Controls.Add(DG);
 
-            //Rasporedi
-            Button Rasporedi = new Button();
-            Rasporedi.Location = new Point(920, 490);
-            Rasporedi.Size = new Size(80, 40);
-            Rasporedi.Text = "Rasporedi";
+            ////Rasporedi
+            //Button Rasporedi = new Button();
+            //Rasporedi.Location = new Point(920, 490);
+            //Rasporedi.Size = new Size(80, 40);
+            //Rasporedi.Text = "Rasporedi";
 
-            Rasporedi.Click += new EventHandler(this.Rasporedi_Event);
+            //Rasporedi.Click += new EventHandler(this.Rasporedi_Event);
 
-            this.Controls.Add(Rasporedi);
+            //this.Controls.Add(Rasporedi);
 
             CreateTeamLabels(60, 60, A_GRUPA);
             CreateTeamLabels(1000, 60, B_GRUPA);
@@ -99,6 +99,7 @@ namespace UEFA_Liga_Sampiona
             Randomize_Groups(GRUPA_6);
             Randomize_Groups(GRUPA_7);
             Randomize_Groups(GRUPA_8);
+
         }
 
         private void CreateTeamLabels(int PosX, int PosY, List<Timovi> Team)
@@ -177,6 +178,13 @@ namespace UEFA_Liga_Sampiona
 
             //D
             e.Graphics.DrawRectangle(new Pen(Brushes.White), 980, 530, 900, 450);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Rasporedi_Event(sender,e);
+            osminaF osmina = new osminaF(GRUPA_1, GRUPA_2, GRUPA_3, GRUPA_4, GRUPA_5, GRUPA_6, GRUPA_7, GRUPA_8);
+            osmina.Show();
         }
     }
 }
