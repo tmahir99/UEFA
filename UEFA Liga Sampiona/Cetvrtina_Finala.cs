@@ -122,8 +122,12 @@ namespace UEFA_Liga_Sampiona
 
         private void button1_Click(object sender, EventArgs e)
         {
+            foreach(var p in GRUPA_1 )
+            {
+                MessageBox.Show(p.ToString());
+            }
             Rasporedi_Event(sender, e);
-            osminaF osmina = new osminaF(GRUPA_1, GRUPA_2, GRUPA_3, GRUPA_4, null, null, null, null); ;
+            osminaF osmina = new osminaF(GRUPA_1, GRUPA_2, GRUPA_3, GRUPA_4, GRUPA_1, GRUPA_2, GRUPA_3, GRUPA_4);
             osmina.Show();
         }
     }

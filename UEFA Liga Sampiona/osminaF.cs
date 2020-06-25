@@ -43,14 +43,13 @@ namespace UEFA_Liga_Sampiona
             FvF(GRUPA_2, 542, 80);
             FvF(GRUPA_3, 1024, 80);
             FvF(GRUPA_4, 1506, 80);
-            if (GRUPA_5 != null)
-            {
-
-                FvF(GRUPA_5, 60, 560);
-                FvF(GRUPA_6, 542, 560);
-                FvF(GRUPA_7, 1024, 560);
-                FvF(GRUPA_8, 1506, 560);
-            }
+            //if (GRUPA_5 != null)
+            //{
+            //    FvF(GRUPA_5, 60, 560);
+            //    FvF(GRUPA_6, 542, 560);
+            //    FvF(GRUPA_7, 1024, 560);
+            //    FvF(GRUPA_8, 1506, 560);
+            //}
         }
         void FvF (List<Timovi> tim, int x, int y)
         {
