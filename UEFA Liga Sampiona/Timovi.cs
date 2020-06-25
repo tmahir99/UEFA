@@ -20,6 +20,10 @@ namespace UEFA_Liga_Sampiona
         public string Liga { get; set; }
         public Nullable<int> Koeficijent { get; set; }
         public Nullable<int> Poeni { get; set; }
+        public Nullable<bool> Osmina_Finala { get; set; }
+        public Nullable<bool> Cetvrtina_Finala { get; set; }
+        public Nullable<bool> Polu_Finale { get; set; }
+        public Nullable<bool> Finale { get; set; }
 
         public Timovi()
         {

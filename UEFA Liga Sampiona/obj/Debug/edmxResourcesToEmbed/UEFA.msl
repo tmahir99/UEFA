@@ -4,6 +4,10 @@
     <EntitySetMapping Name="Timovis">
       <EntityTypeMapping TypeName="UEFAModel.Timovi">
         <MappingFragment StoreEntitySet="Timovi">
+          <ScalarProperty Name="Finale" ColumnName="Finale" />
+          <ScalarProperty Name="Polu_Finale" ColumnName="Polu_Finale" />
+          <ScalarProperty Name="Cetvrtina_Finala" ColumnName="Cetvrtina_Finala" />
+          <ScalarProperty Name="Osmina_Finala" ColumnName="Osmina_Finala" />
           <ScalarProperty Name="Poeni" ColumnName="Poeni" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="Naziv" ColumnName="Naziv" />

@@ -135,6 +135,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddRes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRes.Designer.cs">
+      <DependentUpon>AddRes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cetvrtina_Finala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cetvrtina_Finala.Designer.cs">
+      <DependentUpon>Cetvrtina_Finala.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +192,12 @@
       <DependentUpon>UEFA.edmx</DependentUpon>
     </Compile>
     <Compile Include="zrebovanje.cs" />
+    <EmbeddedResource Include="AddRes.resx">
+      <DependentUpon>AddRes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cetvrtina_Finala.resx">
+      <DependentUpon>Cetvrtina_Finala.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -10,6 +10,10 @@
     <Property Name="Liga" Type="nvarchar" MaxLength="32" />
     <Property Name="Koeficijent" Type="int" />
     <Property Name="Poeni" Type="int" />
+    <Property Name="Osmina_Finala" Type="bit" />
+    <Property Name="Cetvrtina_Finala" Type="bit" />
+    <Property Name="Polu_Finale" Type="bit" />
+    <Property Name="Finale" Type="bit" />
   </EntityType>
   <EntityContainer Name="UEFAModelStoreContainer">
     <EntitySet Name="Timovi" EntityType="Self.Timovi" Schema="dbo" store:Type="Tables" />

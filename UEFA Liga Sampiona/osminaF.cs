@@ -12,22 +12,48 @@ namespace UEFA_Liga_Sampiona
 {
     public partial class osminaF : Form
     {
+        List<Timovi> GRUPA1 = new List<Timovi>();
+        List<Timovi> GRUPA2 = new List<Timovi>();
+        List<Timovi> GRUPA3 = new List<Timovi>();
+        List<Timovi> GRUPA4 = new List<Timovi>();
+        List<Timovi> GRUPA5 = new List<Timovi>();
+        List<Timovi> GRUPA6 = new List<Timovi>();
+        List<Timovi> GRUPA7 = new List<Timovi>();
+        List<Timovi> GRUPA8 = new List<Timovi>();
+
+        List<Timovi> PRVO_PLASIRANI = new List<Timovi>();
+
+        List<Timovi> DRUGO_PLASIRANI = new List<Timovi>();
         public osminaF(List<Timovi> GRUPA_1, List<Timovi> GRUPA_2, List<Timovi> GRUPA_3, List<Timovi> GRUPA_4, List<Timovi> GRUPA_5, List<Timovi> GRUPA_6, List<Timovi> GRUPA_7, List<Timovi> GRUPA_8)
         {
             InitializeComponent();
+
+            GRUPA1 = GRUPA_1;
+            GRUPA2 = GRUPA_2;
+            GRUPA3 = GRUPA_3;
+            GRUPA4 = GRUPA_4;
+            GRUPA5 = GRUPA_5;
+            GRUPA6 = GRUPA_6;
+            GRUPA7 = GRUPA_7;
+            GRUPA8 = GRUPA_8;
+
             WindowState = FormWindowState.Maximized;
+
             FvF(GRUPA_1, 60, 80);
             FvF(GRUPA_2, 542, 80);
             FvF(GRUPA_3, 1024, 80);
             FvF(GRUPA_4, 1506, 80);
-            FvF(GRUPA_5, 60, 560);
-            FvF(GRUPA_6, 542, 560);
-            FvF(GRUPA_7, 1024, 560);
-            FvF(GRUPA_8, 1506, 560);
+            if (GRUPA_5 != null)
+            {
+
+                FvF(GRUPA_5, 60, 560);
+                FvF(GRUPA_6, 542, 560);
+                FvF(GRUPA_7, 1024, 560);
+                FvF(GRUPA_8, 1506, 560);
+            }
         }
         void FvF (List<Timovi> tim, int x, int y)
         {
-            Button[] rez = new Button[6];
             Label[] Timovi = new Label[6];
             int i;
             for (i = 0; i < 6; i++)
@@ -36,12 +62,9 @@ namespace UEFA_Liga_Sampiona
                 Timovi[i].Location = new Point(x, y);
                 Timovi[i].BackColor = Color.Transparent;
                 Timovi[i].ForeColor = Color.White;
+                Timovi[i].Font = new Font("Arial", 10, FontStyle.Bold);
+                Timovi[i].Size = new Size(220, 20);
                 this.Controls.Add(Timovi[i]);
-                rez[i] = new Button();
-                rez[i].Location = new Point(x - 40, y);
-                rez[i].Size = new Size(40, 20);
-                this.Controls.Add(rez[i]);
-                rez[i].Text = "Add";
 
                 y += 35;
             }
@@ -53,6 +76,7 @@ namespace UEFA_Liga_Sampiona
             Timovi[4].Text = $"{tim[1].Naziv} vs. {tim[3].Naziv}";
             Timovi[5].Text = $"{tim[2].Naziv} vs. {tim[3].Naziv}";
             //pokuso sam da dodam to string() i nece, da znas za sutra
+
         }
 
         private void osminaF_Paint(object sender, PaintEventArgs e)
@@ -73,6 +97,61 @@ namespace UEFA_Liga_Sampiona
             e.Graphics.DrawRectangle(new Pen(Brushes.White), 974, 500, 452, 450);
             //grup 8
             e.Graphics.DrawRectangle(new Pen(Brushes.White), 1456, 500, 452, 450);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddRes ar = new AddRes(GRUPA1, PRVO_PLASIRANI, DRUGO_PLASIRANI);
+            ar.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AddRes ar = new AddRes(GRUPA2, PRVO_PLASIRANI, DRUGO_PLASIRANI);
+            ar.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AddRes ar = new AddRes(GRUPA3, PRVO_PLASIRANI, DRUGO_PLASIRANI);
+            ar.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            AddRes ar = new AddRes(GRUPA4, PRVO_PLASIRANI, DRUGO_PLASIRANI);
+            ar.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AddRes ar = new AddRes(GRUPA5, PRVO_PLASIRANI, DRUGO_PLASIRANI);
+            ar.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AddRes ar = new AddRes(GRUPA6, PRVO_PLASIRANI, DRUGO_PLASIRANI);
+            ar.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AddRes ar = new AddRes(GRUPA7, PRVO_PLASIRANI, DRUGO_PLASIRANI);
+            ar.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            AddRes ar = new AddRes(GRUPA8, PRVO_PLASIRANI, DRUGO_PLASIRANI);
+            ar.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Cetvrtina_Finala CF = new Cetvrtina_Finala(PRVO_PLASIRANI, DRUGO_PLASIRANI);
+            CF.Show();
+
         }
     }
 }

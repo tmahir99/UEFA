@@ -113,6 +113,8 @@ namespace UEFA_Liga_Sampiona
                 Timovi[i].Location = new Point(PosX, PosY);
                 Timovi[i].Text = $"{Team[i].Naziv} {Team[i].Zemlja} {Team[i].Koeficijent}";
                 Timovi[i].BackColor = Color.Transparent;
+                Timovi[i].Font = new Font("Arial", 13, FontStyle.Bold);
+                Timovi[i].Size = new Size(220, 20);
                 Timovi[i].ForeColor = Color.White;
 
                 this.Controls.Add(Timovi[i]);

@@ -10,6 +10,10 @@
     <Property Name="Liga" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
     <Property Name="Koeficijent" Type="Int32" />
     <Property Name="Poeni" Type="Int32" />
+    <Property Name="Osmina_Finala" Type="Boolean" />
+    <Property Name="Cetvrtina_Finala" Type="Boolean" />
+    <Property Name="Polu_Finale" Type="Boolean" />
+    <Property Name="Finale" Type="Boolean" />
   </EntityType>
   <EntityContainer Name="UEFAEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Timovis" EntityType="Self.Timovi" />

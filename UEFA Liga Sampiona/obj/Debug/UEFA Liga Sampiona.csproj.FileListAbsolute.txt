@@ -125,3 +125,5 @@ C:\Users\mahir\Documents\GitHub\UEFA\UEFA Liga Sampiona\bin\Debug\System.Runtime
 C:\Users\mahir\Documents\GitHub\UEFA\UEFA Liga Sampiona\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\mahir\Documents\GitHub\UEFA\UEFA Liga Sampiona\obj\Debug\UEFA Liga Sampiona.csproj.CopyComplete
 C:\Users\mahir\Documents\GitHub\UEFA\UEFA Liga Sampiona\obj\Debug\UEFA_Liga_Sampiona.osminaF.resources
+C:\Users\mahir\Documents\GitHub\UEFA\UEFA Liga Sampiona\obj\Debug\UEFA_Liga_Sampiona.AddRes.resources
+C:\Users\mahir\Documents\GitHub\UEFA\UEFA Liga Sampiona\obj\Debug\UEFA_Liga_Sampiona.Cetvrtina_Finala.resources

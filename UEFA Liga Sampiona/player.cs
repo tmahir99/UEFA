@@ -33,7 +33,12 @@ namespace UEFA_Liga_Sampiona
         {
             using (UEFAEntities ctx = new UEFAEntities())
             {
+                foreach (Timovi t in ctx.Timovis)
+                    t.Poeni = 0;
+
                 dataGridView1.DataSource = ctx.Timovis.OrderByDescending(tim => tim.Koeficijent).ToList();
+
+                ctx.SaveChanges();
             }
         }
 
