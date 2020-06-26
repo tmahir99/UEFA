@@ -229,6 +229,7 @@
             this.id.Name = "id";
             this.id.Size = new System.Drawing.Size(100, 20);
             this.id.TabIndex = 17;
+            this.id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.id_KeyPress);
             // 
             // coeficient
             // 
@@ -236,6 +237,7 @@
             this.coeficient.Name = "coeficient";
             this.coeficient.Size = new System.Drawing.Size(100, 20);
             this.coeficient.TabIndex = 18;
+            this.coeficient.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.coeficient_KeyPress);
             // 
             // player
             // 

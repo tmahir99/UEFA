@@ -34,7 +34,11 @@ namespace UEFA_Liga_Sampiona
             using (UEFAEntities ctx = new UEFAEntities())
             {
                 foreach (Timovi t in ctx.Timovis)
+                {
                     t.Poeni = 0;
+                    t.Osmina_Finala = false;
+                }
+                
 
                 dataGridView1.DataSource = ctx.Timovis.OrderByDescending(tim => tim.Koeficijent).ToList();
 
@@ -79,6 +83,26 @@ namespace UEFA_Liga_Sampiona
         private void metroButton4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void id_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Char chr = e.KeyChar;
+            if (!Char.IsDigit(chr) && chr != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Uneti karakter nije broj (1-9)");
+            }
+        }
+
+        private void coeficient_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Char chr = e.KeyChar;
+            if (!Char.IsDigit(chr) && chr != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Uneti karakter nije broj (1-9)");
+            }
         }
     }
 }

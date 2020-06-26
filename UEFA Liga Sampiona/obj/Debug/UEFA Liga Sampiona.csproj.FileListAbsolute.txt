@@ -127,3 +127,5 @@ C:\Users\mahir\Documents\GitHub\UEFA\UEFA Liga Sampiona\obj\Debug\UEFA Liga Samp
 C:\Users\mahir\Documents\GitHub\UEFA\UEFA Liga Sampiona\obj\Debug\UEFA_Liga_Sampiona.osminaF.resources
 C:\Users\mahir\Documents\GitHub\UEFA\UEFA Liga Sampiona\obj\Debug\UEFA_Liga_Sampiona.AddRes.resources
 C:\Users\mahir\Documents\GitHub\UEFA\UEFA Liga Sampiona\obj\Debug\UEFA_Liga_Sampiona.Cetvrtina_Finala.resources
+C:\Users\mahir\Documents\GitHub\UEFA\UEFA Liga Sampiona\obj\Debug\UEFA_Liga_Sampiona.KRAJ.resources
+C:\Users\mahir\Documents\GitHub\UEFA\UEFA Liga Sampiona\obj\Debug\UEFA_Liga_Sampiona.ADDRESULTENDGAME.resources

@@ -62,6 +62,10 @@ namespace UEFA_Liga_Sampiona
             Randomize_Groups(GRUPA_2);
             Randomize_Groups(GRUPA_3);
             Randomize_Groups(GRUPA_4);
+            Randomize_Groups(GRUPA_1);
+            Randomize_Groups(GRUPA_2);
+            Randomize_Groups(GRUPA_3);
+            Randomize_Groups(GRUPA_4);
 
         }
 
@@ -127,8 +131,8 @@ namespace UEFA_Liga_Sampiona
                 MessageBox.Show(p.ToString());
             }
             Rasporedi_Event(sender, e);
-            osminaF osmina = new osminaF(GRUPA_1, GRUPA_2, GRUPA_3, GRUPA_4, GRUPA_1, GRUPA_2, GRUPA_3, GRUPA_4);
-            osmina.Show();
+            osminaF of = new osminaF(GRUPA_1, GRUPA_2, GRUPA_3, GRUPA_4, null, null, null, null);
+            of.Show();
         }
     }
 }

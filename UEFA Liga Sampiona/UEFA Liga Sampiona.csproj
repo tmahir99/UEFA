@@ -141,6 +141,12 @@
     <Compile Include="AddRes.Designer.cs">
       <DependentUpon>AddRes.cs</DependentUpon>
     </Compile>
+    <Compile Include="ADDRESULTENDGAME.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADDRESULTENDGAME.Designer.cs">
+      <DependentUpon>ADDRESULTENDGAME.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cetvrtina_Finala.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KRAJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KRAJ.Designer.cs">
+      <DependentUpon>KRAJ.cs</DependentUpon>
     </Compile>
     <Compile Include="osminaF.cs">
       <SubType>Form</SubType>
@@ -195,11 +207,17 @@
     <EmbeddedResource Include="AddRes.resx">
       <DependentUpon>AddRes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ADDRESULTENDGAME.resx">
+      <DependentUpon>ADDRESULTENDGAME.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cetvrtina_Finala.resx">
       <DependentUpon>Cetvrtina_Finala.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KRAJ.resx">
+      <DependentUpon>KRAJ.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="osminaF.resx">
       <DependentUpon>osminaF.cs</DependentUpon>

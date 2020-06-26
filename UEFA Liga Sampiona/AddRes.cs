@@ -139,5 +139,141 @@ namespace UEFA_Liga_Sampiona
 
             this.Close();
         }
+
+        private void AddRes_Load(object sender, EventArgs e)
+        {
+            textBox1.Text = "1";
+            textBox2.Text = "1";
+            textBox3.Text = "1";
+            textBox4.Text = "1";
+            textBox5.Text = "1";
+            textBox6.Text = "1";
+            textBox7.Text = "1";
+            textBox8.Text = "1";
+            textBox9.Text = "1";
+            textBox10.Text = "1";
+            textBox11.Text = "1";
+            textBox12.Text = "1";
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Char chr = e.KeyChar;
+            if (!Char.IsDigit(chr) && chr != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Uneti karakter nije broj (1-9)");
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Char chr = e.KeyChar;
+            if (!Char.IsDigit(chr) && chr != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Uneti karakter nije broj (1-9)");
+            }
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Char chr = e.KeyChar;
+            if (!Char.IsDigit(chr) && chr != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Uneti karakter nije broj (1-9)");
+            }
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Char chr = e.KeyChar;
+            if (!Char.IsDigit(chr) && chr != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Uneti karakter nije broj (1-9)");
+            }
+        }
+
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Char chr = e.KeyChar;
+            if (!Char.IsDigit(chr) && chr != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Uneti karakter nije broj (1-9)");
+            }
+        }
+
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Char chr = e.KeyChar;
+            if (!Char.IsDigit(chr) && chr != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Uneti karakter nije broj (1-9)");
+            }
+        }
+
+        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Char chr = e.KeyChar;
+            if (!Char.IsDigit(chr) && chr != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Uneti karakter nije broj (1-9)");
+            }
+        }
+
+        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Char chr = e.KeyChar;
+            if (!Char.IsDigit(chr) && chr != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Uneti karakter nije broj (1-9)");
+            }
+        }
+
+        private void textBox9_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Char chr = e.KeyChar;
+            if (!Char.IsDigit(chr) && chr != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Uneti karakter nije broj (1-9)");
+            }
+        }
+
+        private void textBox10_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Char chr = e.KeyChar;
+            if (!Char.IsDigit(chr) && chr != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Uneti karakter nije broj (1-9)");
+            }
+        }
+
+        private void textBox11_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Char chr = e.KeyChar;
+            if (!Char.IsDigit(chr) && chr != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Uneti karakter nije broj (1-9)");
+            }
+        }
+
+        private void textBox12_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Char chr = e.KeyChar;
+            if (!Char.IsDigit(chr) && chr != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Uneti karakter nije broj (1-9)");
+            }
+        }
     }
 }

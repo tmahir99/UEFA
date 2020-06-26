@@ -24,6 +24,7 @@ namespace UEFA_Liga_Sampiona
         List<Timovi> PRVO_PLASIRANI = new List<Timovi>();
 
         List<Timovi> DRUGO_PLASIRANI = new List<Timovi>();
+
         public osminaF(List<Timovi> GRUPA_1, List<Timovi> GRUPA_2, List<Timovi> GRUPA_3, List<Timovi> GRUPA_4, List<Timovi> GRUPA_5, List<Timovi> GRUPA_6, List<Timovi> GRUPA_7, List<Timovi> GRUPA_8)
         {
             InitializeComponent();
@@ -43,14 +44,15 @@ namespace UEFA_Liga_Sampiona
             FvF(GRUPA_2, 542, 80);
             FvF(GRUPA_3, 1024, 80);
             FvF(GRUPA_4, 1506, 80);
-            //if (GRUPA_5 != null)
-            //{
-            //    FvF(GRUPA_5, 60, 560);
-            //    FvF(GRUPA_6, 542, 560);
-            //    FvF(GRUPA_7, 1024, 560);
-            //    FvF(GRUPA_8, 1506, 560);
-            //}
+            if (GRUPA_5 != null)
+            {
+                FvF(GRUPA_5, 60, 560);
+                FvF(GRUPA_6, 542, 560);
+                FvF(GRUPA_7, 1024, 560);
+                FvF(GRUPA_8, 1506, 560);
+            }
         }
+
         void FvF (List<Timovi> tim, int x, int y)
         {
             Label[] Timovi = new Label[6];
@@ -89,6 +91,10 @@ namespace UEFA_Liga_Sampiona
             //grup 4
             e.Graphics.DrawRectangle(new Pen(Brushes.White), 1456, 20, 452, 450);
             //grup 5
+
+
+            if (GRUPA5 != null)
+            { 
             e.Graphics.DrawRectangle(new Pen(Brushes.White), 10, 500, 452, 450);
             //grup 6
             e.Graphics.DrawRectangle(new Pen(Brushes.White), 492, 500, 452, 450);
@@ -96,6 +102,8 @@ namespace UEFA_Liga_Sampiona
             e.Graphics.DrawRectangle(new Pen(Brushes.White), 974, 500, 452, 450);
             //grup 8
             e.Graphics.DrawRectangle(new Pen(Brushes.White), 1456, 500, 452, 450);
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -151,6 +159,29 @@ namespace UEFA_Liga_Sampiona
             Cetvrtina_Finala CF = new Cetvrtina_Finala(PRVO_PLASIRANI, DRUGO_PLASIRANI);
             CF.Show();
 
+        }
+
+        private void osminaF_Load(object sender, EventArgs e)
+        {
+            if(GRUPA5 != null)
+            {
+                button10.Hide();
+            }
+            else
+            {
+                button4.Hide();
+                button2.Hide();
+                button3.Hide();
+                button7.Hide();
+                button9.Hide();
+                button10.Show();
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            KRAJ kraj = new KRAJ(PRVO_PLASIRANI, DRUGO_PLASIRANI);
+            kraj.Show();
         }
     }
 }
