@@ -23,7 +23,12 @@ namespace UEFA_Liga_Sampiona
         Timovi[] DesniGore = new Timovi[2];
 
         //ZADNJA CETVORICA
-        Timovi[] Pobednici = new Timovi[4];
+        Timovi[] Pobednici = new Timovi[8];
+
+        //manje levo
+        Timovi[] Levo = new Timovi[2];
+        Timovi[] Desno =  new Timovi[2];
+
         public KRAJ(List <Timovi> pp, List<Timovi> dp)
         {
             InitializeComponent();
@@ -104,30 +109,38 @@ namespace UEFA_Liga_Sampiona
 
         private void ADD0_Click(object sender, EventArgs e)
         {
-            ADDRESULTENDGAME AddRes = new ADDRESULTENDGAME(LeviGore, Pobednici, 0);
+            ADDRESULTENDGAME AddRes = new ADDRESULTENDGAME(LeviGore, 0, 1, Pobednici, 0);
             AddRes.Show();
         }
 
         private void ADD1_Click(object sender, EventArgs e)
         {
-            ADDRESULTENDGAME AddRes = new ADDRESULTENDGAME(LeviDole, Pobednici, 1);
+            ADDRESULTENDGAME AddRes = new ADDRESULTENDGAME(LeviDole, 0, 1, Pobednici, 1);
             AddRes.Show();
         }
 
         private void ADD2_Click(object sender, EventArgs e)
         {
-            ADDRESULTENDGAME AddRes = new ADDRESULTENDGAME(DesniGore, Pobednici, 2);
+            ADDRESULTENDGAME AddRes = new ADDRESULTENDGAME(DesniGore, 0, 1, Pobednici, 2);
             AddRes.Show();
         }
 
         private void ADD3_Click(object sender, EventArgs e)
         {
-            ADDRESULTENDGAME AddRes = new ADDRESULTENDGAME(DesniDole, Pobednici, 3);
+            ADDRESULTENDGAME AddRes = new ADDRESULTENDGAME(DesniDole, 0, 1, Pobednici, 3);
             AddRes.Show();
         }
 
         private void KRAJ_MouseMove(object sender, MouseEventArgs e)
         {
+
+            Levo[0] = Pobednici[0];
+            Levo[1] = Pobednici[1];
+
+            Desno[0] = Pobednici[2];
+            Desno[1] = Pobednici[3];
+
+
             //skroz levo
             LABELISPIS(150, 120, LeviGore, 0);
             LABELISPIS(150, 342, LeviGore, 1);
@@ -146,11 +159,41 @@ namespace UEFA_Liga_Sampiona
             LABELISPIS(1318, 231, Pobednici, 2);
             LABELISPIS(1318, 675, Pobednici, 3);
             //levo
-            LABELISPIS(734, 453, Pobednici, 0);
+            LABELISPIS(734, 453, Pobednici, 4);
             //desno
-            LABELISPIS(1026, 453, Pobednici, 1);
+            LABELISPIS(1026, 453, Pobednici, 5);
+            if(Pobednici[6] != null)
+            {
+                Label l = new Label();
+                l.Location = new Point(730, 111);
+                l.Size = new Size(600, 222);
+                l.BackColor = Color.Transparent;
+                l.ForeColor = Color.White;
+                l.Font = new Font("Arial", 20, FontStyle.Bold);
+                this.Controls.Add(l);
+                l.Text = "UEFA sampion je: \r\n" + Pobednici[6].Naziv;
+            }
 
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ADDRESULTENDGAME AddRes = new ADDRESULTENDGAME(Pobednici, 0, 1, Pobednici, 4);
+            AddRes.Show();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ADDRESULTENDGAME AddRes = new ADDRESULTENDGAME(Pobednici, 2, 3, Pobednici, 5);
+            AddRes.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ADDRESULTENDGAME AddRes = new ADDRESULTENDGAME(Pobednici, 4, 5, Pobednici, 6);
+            AddRes.Show();
         }
     }
 }

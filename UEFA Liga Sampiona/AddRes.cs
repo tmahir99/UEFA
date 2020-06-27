@@ -143,17 +143,17 @@ namespace UEFA_Liga_Sampiona
         private void AddRes_Load(object sender, EventArgs e)
         {
             textBox1.Text = "1";
-            textBox2.Text = "1";
+            textBox2.Text = "0";
             textBox3.Text = "1";
-            textBox4.Text = "1";
+            textBox4.Text = "0";
             textBox5.Text = "1";
-            textBox6.Text = "1";
+            textBox6.Text = "0";
             textBox7.Text = "1";
-            textBox8.Text = "1";
+            textBox8.Text = "0";
             textBox9.Text = "1";
-            textBox10.Text = "1";
+            textBox10.Text = "0";
             textBox11.Text = "1";
-            textBox12.Text = "1";
+            textBox12.Text = "0";
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
