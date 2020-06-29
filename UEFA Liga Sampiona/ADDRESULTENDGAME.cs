@@ -59,28 +59,32 @@ namespace UEFA_Liga_Sampiona
             //    S += 1;
             //}
 
-            if (int.Parse(textBox1.Text) >= int.Parse(textBox2.Text) && int.Parse(textBox3.Text) >= int.Parse(textBox4.Text))
-            {
-                S += 1;
-                MessageBox.Show("Tim broj 1 nastavlja ligu zbog poena iz prethodnih utakmica");
-            }
-            else if(int.Parse(textBox3.Text) >= int.Parse(textBox4.Text) && int.Parse(textBox1.Text) == int.Parse(textBox2.Text))
-            {
-                S1 += 1;
-            }
-            else if (int.Parse(textBox3.Text) <= int.Parse(textBox4.Text) && int.Parse(textBox1.Text) == int.Parse(textBox2.Text))
-            {
-                S += 1;
-            }
-            else if (int.Parse(textBox3.Text) == int.Parse(textBox4.Text) && int.Parse(textBox1.Text) == int.Parse(textBox2.Text))
-            {
-                S += 1;
-                MessageBox.Show("Tim broj 1 nastavlja ligu zbog poena iz prethodnih utakmica");
-            }
-            else
-            {
-                S += 1;
-            }
+            //if (int.Parse(textBox1.Text) >= int.Parse(textBox2.Text) && int.Parse(textBox3.Text) >= int.Parse(textBox4.Text))
+            //{
+            //    S += 1;
+            //    MessageBox.Show("Tim broj 1 nastavlja ligu zbog poena iz prethodnih utakmica");
+            //}
+            //else if(int.Parse(textBox3.Text) >= int.Parse(textBox4.Text) && int.Parse(textBox1.Text) == int.Parse(textBox2.Text))
+            //{
+            //    S1 += 1;
+            //}
+            //else if (int.Parse(textBox3.Text) <= int.Parse(textBox4.Text) && int.Parse(textBox1.Text) == int.Parse(textBox2.Text))
+            //{
+            //    S += 1;
+            //}
+            //else if (int.Parse(textBox3.Text) == int.Parse(textBox4.Text) && int.Parse(textBox1.Text) == int.Parse(textBox2.Text))
+            //{
+            //    S += 1;
+            //    MessageBox.Show("Tim broj 1 nastavlja ligu zbog poena iz prethodnih utakmica");
+            //}
+            //else
+            //{
+            //    S += 1;
+            //}
+
+            S += int.Parse(textBox1.Text) + int.Parse(textBox4.Text);
+            S1 += int.Parse(textBox2.Text) + int.Parse(textBox3.Text);
+
             if (S >= S1)
             {
                 POBEDNICI[KojiTim] = grupa[t1];
